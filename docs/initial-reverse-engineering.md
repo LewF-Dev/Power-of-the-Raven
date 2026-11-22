@@ -29,6 +29,12 @@ Baking the three code changes into the executable could remove the need for a li
 3. Trace how those resources are registered when entering Dawn of Ragnarök and determine whether a data patch can register them at startup, or whether a small version-specific code hook is needed.
 4. Only then choose the install format and implement the no-preload solution.
 
+## Asset-tool compatibility
+
+The user's open AnvilToolkit window is version 1.2.10. Its game selector does not list Assassin's Creed Valhalla, so this installed build cannot browse Valhalla's Forge archives. The current AnvilToolkit supported-game list also omits Valhalla.
+
+[Blacksmith](https://github.com/theawesomecoder61/Blacksmith) documents Valhalla Forge browsing and extraction, including filelist generation. It explicitly cannot repack or replace files, so it can help identify Raven data but cannot by itself package a Forge-based mod. The official latest release page identifies v1.9.5.1 as its release for Valhalla 1.3.1; compatibility with the user's 1.7.0 build remains to be verified.
+
 The game executable and Forge archives are needed for steps 1–3. Keep those files local; do not commit them to this repository.
 
 ## Non-destructive workflow
