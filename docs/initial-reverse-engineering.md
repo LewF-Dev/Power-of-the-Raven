@@ -30,3 +30,7 @@ Baking the three code changes into the executable could remove the need for a li
 4. Only then choose the install format and implement the no-preload solution.
 
 The game executable and Forge archives are needed for steps 1–3. Keep those files local; do not commit them to this repository.
+
+## Non-destructive workflow
+
+Initial inspection is read-only. Any first patch attempt should target a separate executable copy in the workspace, not the live game folder. Before a live install is considered, the patcher must verify the exact 1.7.0 signatures, create and verify a restorable backup, and document the restore command. No game files are changed as part of the current investigation.
